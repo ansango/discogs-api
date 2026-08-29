@@ -1,0 +1,11 @@
+src/
+tool/
+scripts/
+tests/
+__tests__/
+tsconfig.json
+tsconfig.build.json
+biome.json
+.github/
+.env*
+*.log

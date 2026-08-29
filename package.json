@@ -1,0 +1,121 @@
+{
+	"name": "@ansango/discogs-api",
+	"version": "1.0.0",
+	"description": "TypeScript SDK for the Discogs API v2. Zero-dependency, type-safe with Zod, OAuth 1.0a & Personal Access Token support.",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./database": {
+			"types": "./dist/entrypoints/database.d.ts",
+			"import": "./dist/entrypoints/database.js",
+			"default": "./dist/entrypoints/database.js"
+		},
+		"./database/schemas": {
+			"types": "./dist/entrypoints/database.schemas.d.ts",
+			"import": "./dist/entrypoints/database.schemas.js",
+			"default": "./dist/entrypoints/database.schemas.js"
+		},
+		"./collection": {
+			"types": "./dist/entrypoints/collection.d.ts",
+			"import": "./dist/entrypoints/collection.js",
+			"default": "./dist/entrypoints/collection.js"
+		},
+		"./collection/schemas": {
+			"types": "./dist/entrypoints/collection.schemas.d.ts",
+			"import": "./dist/entrypoints/collection.schemas.js",
+			"default": "./dist/entrypoints/collection.schemas.js"
+		},
+		"./wantlist": {
+			"types": "./dist/entrypoints/wantlist.d.ts",
+			"import": "./dist/entrypoints/wantlist.js",
+			"default": "./dist/entrypoints/wantlist.js"
+		},
+		"./wantlist/schemas": {
+			"types": "./dist/entrypoints/wantlist.schemas.d.ts",
+			"import": "./dist/entrypoints/wantlist.schemas.js",
+			"default": "./dist/entrypoints/wantlist.schemas.js"
+		},
+		"./user": {
+			"types": "./dist/entrypoints/user.d.ts",
+			"import": "./dist/entrypoints/user.js",
+			"default": "./dist/entrypoints/user.js"
+		},
+		"./user/schemas": {
+			"types": "./dist/entrypoints/user.schemas.d.ts",
+			"import": "./dist/entrypoints/user.schemas.js",
+			"default": "./dist/entrypoints/user.schemas.js"
+		},
+		"./marketplace": {
+			"types": "./dist/entrypoints/marketplace.d.ts",
+			"import": "./dist/entrypoints/marketplace.js",
+			"default": "./dist/entrypoints/marketplace.js"
+		},
+		"./marketplace/schemas": {
+			"types": "./dist/entrypoints/marketplace.schemas.d.ts",
+			"import": "./dist/entrypoints/marketplace.schemas.js",
+			"default": "./dist/entrypoints/marketplace.schemas.js"
+		},
+		"./lists": {
+			"types": "./dist/entrypoints/lists.d.ts",
+			"import": "./dist/entrypoints/lists.js",
+			"default": "./dist/entrypoints/lists.js"
+		},
+		"./lists/schemas": {
+			"types": "./dist/entrypoints/lists.schemas.d.ts",
+			"import": "./dist/entrypoints/lists.schemas.js",
+			"default": "./dist/entrypoints/lists.schemas.js"
+		},
+		"./auth": {
+			"types": "./dist/entrypoints/auth.d.ts",
+			"import": "./dist/entrypoints/auth.js",
+			"default": "./dist/entrypoints/auth.js"
+		},
+		"./auth/schemas": {
+			"types": "./dist/entrypoints/auth.schemas.d.ts",
+			"import": "./dist/entrypoints/auth.schemas.js",
+			"default": "./dist/entrypoints/auth.schemas.js"
+		}
+	},
+	"scripts": {
+		"build": "rimraf dist && tsc -p tsconfig.build.json",
+		"typecheck": "tsc --noEmit",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"test": "bun test",
+		"prepare": "bun run build",
+		"tool:dev": "bun run --cwd tool/api-scalar dev",
+		"tool:test": "bun test tool/api-scalar",
+		"tool:typecheck": "tsc -p tool/api-scalar/tsconfig.json --noEmit"
+	},
+	"keywords": ["discogs", "api", "sdk", "vinyl", "music", "marketplace", "collection", "wantlist", "typescript", "zod"],
+	"author": "ansango <anibalsantosgo@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ansango/discogs-api.git"
+	},
+	"homepage": "https://github.com/ansango/discogs-api#readme",
+	"bugs": {
+		"url": "https://github.com/ansango/discogs-api/issues"
+	},
+	"dependencies": {
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.13.9",
+		"bun-types": "latest",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.7.3"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
