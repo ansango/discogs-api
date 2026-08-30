@@ -16,5 +16,6 @@
 		"allowJs": true,
 		"types": ["bun-types"]
 	},
-	"include": ["src/**/*", "tool/**/*", "scripts/**/*", "biome.json"]
+	"include": ["src/**/*", "scripts/**/*"],
+	"exclude": ["node_modules", "dist", "tool"]
 }
