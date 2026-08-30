@@ -1,7 +1,7 @@
+import { CANONICAL_METHODS } from '@/canonical-methods.js'
+import { DiscogsClient } from '@/client.js'
 import { apiReference } from '@scalar/hono-api-reference'
 import { Hono } from 'hono'
-import { CANONICAL_METHODS } from '../../../src/canonical-methods.js'
-import { DiscogsClient } from '../../../src/client.js'
 
 export interface ServerOptions {
 	userAgent?: string

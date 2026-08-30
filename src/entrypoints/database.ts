@@ -1,1 +1,1 @@
-export * from '../database/service.js'
+export * from '@/api/database/index.js'

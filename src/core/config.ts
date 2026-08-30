@@ -1,4 +1,4 @@
-import type { RateLimiter } from './transport/limiter.js'
+import type { RateLimiter } from '@/core/rate-limiter/index.js'
 
 export interface DiscogsConfig {
 	/**

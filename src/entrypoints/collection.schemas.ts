@@ -1,1 +1,1 @@
-export * from '../collection/schemas.js'
+export * from '@/api/collection/schemas.js'

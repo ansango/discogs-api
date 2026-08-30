@@ -1,7 +1,7 @@
-import type { DiscogsConfig } from '../config.js'
-import { parseDiscogsResponse } from '../errors.js'
-import { RateLimiter } from './limiter.js'
-import { buildOAuthHeader } from './oauth.js'
+import { buildOAuthHeader } from '@/core/auth/index.js'
+import type { DiscogsConfig } from '@/core/config.js'
+import { parseDiscogsResponse } from '@/core/errors/index.js'
+import { RateLimiter } from '@/core/rate-limiter/index.js'
 
 export interface RequestOptions {
 	method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'

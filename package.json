@@ -84,7 +84,7 @@
 		}
 	},
 	"scripts": {
-		"build": "rimraf dist && tsc -p tsconfig.build.json",
+		"build": "rimraf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
 		"typecheck": "tsc --noEmit",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
@@ -113,6 +113,7 @@
 		"@types/node": "^22.13.9",
 		"bun-types": "latest",
 		"rimraf": "^6.0.1",
+		"tsc-alias": "^1.9.2",
 		"typescript": "^5.7.3"
 	},
 	"publishConfig": {

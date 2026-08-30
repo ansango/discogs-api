@@ -1,1 +1,1 @@
-export * from '../lists/schemas.js'
+export * from '@/api/lists/schemas.js'

@@ -1,1 +1,1 @@
-export * from '../lists/service.js'
+export * from '@/api/lists/index.js'

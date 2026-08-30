@@ -1,5 +1,5 @@
+import { paginationParamsSchema, paginationSchema } from '@/core/schemas/base.schemas.js'
 import { z } from 'zod'
-import { paginationParamsSchema, paginationSchema } from '../core/schemas/base.schemas.js'
 
 export const userIdentitySchema = z.object({
 	id: z.number().int().positive(),

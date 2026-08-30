@@ -1,1 +1,1 @@
-export * from '../marketplace/schemas.js'
+export * from '@/api/marketplace/schemas.js'

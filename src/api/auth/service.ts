@@ -1,6 +1,6 @@
-import type { DiscogsConfig } from '../config.js'
-import { DiscogsAuthError } from '../errors.js'
-import { buildOAuthHeader } from '../transport/oauth.js'
+import { buildOAuthHeader } from '@/core/auth/index.js'
+import type { DiscogsConfig } from '@/core/config.js'
+import { DiscogsAuthError } from '@/core/errors/index.js'
 import type { DiscogsAccessTokenResponse, DiscogsRequestTokenResponse } from './schemas.js'
 
 export interface AuthService {

@@ -1,1 +1,1 @@
-export * from '../wantlist/service.js'
+export * from '@/api/wantlist/index.js'
