@@ -88,11 +88,11 @@
 		"typecheck": "tsc --noEmit",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
-		"test": "bun test",
+		"test": "bun test src/__tests__",
 		"prepare": "bun run build",
 		"tool:dev": "bun run --cwd tool/api-scalar dev",
-		"tool:test": "bun test tool/api-scalar",
-		"tool:typecheck": "tsc -p tool/api-scalar/tsconfig.json --noEmit"
+		"tool:test": "bun install --cwd tool/api-scalar && bun test tool/api-scalar",
+		"tool:typecheck": "bun install --cwd tool/api-scalar && tsc -p tool/api-scalar/tsconfig.json --noEmit"
 	},
 	"keywords": ["discogs", "api", "sdk", "vinyl", "music", "marketplace", "collection", "wantlist", "typescript", "zod"],
 	"author": "ansango <anibalsantosgo@gmail.com>",
