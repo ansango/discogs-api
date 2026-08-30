@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test'
-import { DiscogsClient } from '../client.js'
+import { DiscogsClient } from '@/client.js'
 import { type FetchMock, installFetchMock } from './helpers/fetch-mock.js'
 
 describe('Database Service', () => {

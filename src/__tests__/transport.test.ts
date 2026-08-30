@@ -1,9 +1,9 @@
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test'
-import { createConfig } from '../config.js'
-import { DiscogsApiError, DiscogsAuthError, DiscogsRateLimitError } from '../errors.js'
-import { discogsFetcher } from '../transport/fetcher.js'
-import { RateLimiter } from '../transport/limiter.js'
-import { buildOAuthHeader } from '../transport/oauth.js'
+import { buildOAuthHeader } from '@/core/auth/index.js'
+import { createConfig } from '@/core/config.js'
+import { DiscogsApiError, DiscogsAuthError, DiscogsRateLimitError } from '@/core/errors/index.js'
+import { discogsFetcher } from '@/core/http/index.js'
+import { RateLimiter } from '@/core/rate-limiter/index.js'
 import { type FetchMock, installFetchMock } from './helpers/fetch-mock.js'
 
 describe('Transport Layer', () => {

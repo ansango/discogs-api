@@ -1,7 +1,7 @@
+import { CANONICAL_METHODS } from '@/canonical-methods.js'
+import { DiscogsClient } from '@/client.js'
 import { apiReference } from '@scalar/hono-api-reference'
-import { Hono } from 'hono'
-import { CANONICAL_METHODS } from '../../../src/canonical-methods.js'
-import { DiscogsClient } from '../../../src/client.js'
+import { type Context, Hono } from 'hono'
 
 export interface ServerOptions {
 	userAgent?: string
@@ -61,7 +61,7 @@ export function createServer(opts: ServerOptions = {}) {
 	})
 
 	// OpenAPI JSON spec endpoint
-	app.get('/openapi.json', (c) => c.json(createOpenApiSpec()))
+	app.get('/openapi.json', (c: Context) => c.json(createOpenApiSpec()))
 
 	// Scalar UI reference
 	app.get(
@@ -74,7 +74,7 @@ export function createServer(opts: ServerOptions = {}) {
 	)
 
 	// Status check
-	app.get('/health', (c) =>
+	app.get('/health', (c: Context) =>
 		c.json({
 			status: 'ok',
 			clientConfig: {

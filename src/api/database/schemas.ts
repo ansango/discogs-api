@@ -1,4 +1,3 @@
-import { z } from 'zod'
 import {
 	artistCreditSchema,
 	communityRatingSchema,
@@ -12,7 +11,8 @@ import {
 	releaseLabelSchema,
 	trackItemSchema,
 	videoSchema,
-} from '../core/schemas/base.schemas.js'
+} from '@/core/schemas/base.schemas.js'
+import { z } from 'zod'
 
 export const releaseSchema = z.object({
 	id: z.number().int().positive(),

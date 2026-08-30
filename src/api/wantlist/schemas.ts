@@ -1,6 +1,6 @@
+import { collectionBasicInformationSchema } from '@/api/collection/schemas.js'
+import { paginationParamsSchema, paginationSchema, ratingValueSchema } from '@/core/schemas/base.schemas.js'
 import { z } from 'zod'
-import { collectionBasicInformationSchema } from '../collection/schemas.js'
-import { paginationParamsSchema, paginationSchema, ratingValueSchema } from '../core/schemas/base.schemas.js'
 
 export const wantlistItemSchema = z.object({
 	id: z.number().int().positive(),

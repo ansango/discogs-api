@@ -4,6 +4,10 @@
 		"target": "ESNext",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
 		"moduleDetection": "force",
 		"strict": true,
 		"skipLibCheck": true,
@@ -12,5 +16,6 @@
 		"allowJs": true,
 		"types": ["bun-types"]
 	},
-	"include": ["src/**/*", "tool/**/*", "scripts/**/*", "biome.json"]
+	"include": ["src/**/*", "scripts/**/*"],
+	"exclude": ["node_modules", "dist", "tool"]
 }

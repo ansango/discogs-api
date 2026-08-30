@@ -1,1 +1,1 @@
-export * from '../collection/service.js'
+export * from '@/api/collection/index.js'

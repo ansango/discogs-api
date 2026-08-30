@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test'
-import { CANONICAL_METHODS } from '../canonical-methods.js'
-import { DiscogsClient } from '../client.js'
+import { CANONICAL_METHODS } from '@/canonical-methods.js'
+import { DiscogsClient } from '@/client.js'
 
 describe('Canonical Method Inventory', () => {
 	test('all canonical methods are implemented on DiscogsClient', () => {

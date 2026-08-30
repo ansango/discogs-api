@@ -1,1 +1,1 @@
-export * from '../wantlist/schemas.js'
+export * from '@/api/wantlist/schemas.js'

@@ -1,4 +1,3 @@
-import { z } from 'zod'
 import {
 	artistCreditSchema,
 	companySchema,
@@ -7,7 +6,8 @@ import {
 	ratingValueSchema,
 	releaseFormatSchema,
 	releaseLabelSchema,
-} from '../core/schemas/base.schemas.js'
+} from '@/core/schemas/base.schemas.js'
+import { z } from 'zod'
 
 export const collectionFolderSchema = z.object({
 	id: z.number().int(),

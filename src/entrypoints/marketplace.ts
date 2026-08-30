@@ -1,1 +1,1 @@
-export * from '../marketplace/service.js'
+export * from '@/api/marketplace/index.js'

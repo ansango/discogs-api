@@ -1,1 +1,1 @@
-export * from '../database/schemas.js'
+export * from '@/api/database/schemas.js'

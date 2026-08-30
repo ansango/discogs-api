@@ -1,11 +1,20 @@
-import { type AuthService, createAuthService } from './auth/index.js'
-import { type CollectionService, createCollectionService } from './collection/index.js'
-import { type DiscogsConfig, createConfig, getGlobalConfig } from './config.js'
-import { type DatabaseService, createDatabaseService } from './database/index.js'
-import { type ListsService, createListsService } from './lists/index.js'
-import { type MarketplaceService, createMarketplaceService } from './marketplace/index.js'
-import { type UserService, createUserService } from './user/index.js'
-import { type WantlistService, createWantlistService } from './wantlist/index.js'
+import {
+	type AuthService,
+	type CollectionService,
+	type DatabaseService,
+	type ListsService,
+	type MarketplaceService,
+	type UserService,
+	type WantlistService,
+	createAuthService,
+	createCollectionService,
+	createDatabaseService,
+	createListsService,
+	createMarketplaceService,
+	createUserService,
+	createWantlistService,
+} from '@/api/index.js'
+import { type DiscogsConfig, createConfig, getGlobalConfig } from '@/core/index.js'
 
 /**
  * Main Discogs API Client.

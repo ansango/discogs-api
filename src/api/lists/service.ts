@@ -1,6 +1,6 @@
-import type { DiscogsConfig } from '../config.js'
-import type { PaginationParams } from '../core/schemas/base.schemas.js'
-import { discogsFetcher } from '../transport/fetcher.js'
+import type { DiscogsConfig } from '@/core/config.js'
+import { discogsFetcher } from '@/core/http/index.js'
+import type { PaginationParams } from '@/core/schemas/base.schemas.js'
 import type { DiscogsListDetails, DiscogsUserListsResponse } from './schemas.js'
 
 export interface ListsService {
